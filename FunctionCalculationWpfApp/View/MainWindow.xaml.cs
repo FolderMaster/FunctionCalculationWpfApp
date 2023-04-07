@@ -5,10 +5,13 @@ using FunctionCalculationWpfApp.ViewModel;
 namespace FunctionCalculationWpfApp.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Основное окно приложения.
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MainWindow"/> по умолчанию.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

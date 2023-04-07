@@ -9,7 +9,7 @@ using System.Windows;
 namespace FunctionCalculationWpfApp
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Приложение.
     /// </summary>
     public partial class App : Application
     {

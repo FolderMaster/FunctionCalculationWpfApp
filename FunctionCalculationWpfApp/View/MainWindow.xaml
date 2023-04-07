@@ -9,7 +9,9 @@
     <Grid Margin="5px">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5px"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5px"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Grid.Row="0">
@@ -18,7 +20,9 @@
                          SelectedItem="{Binding SelectedFunction}"/>
             </GroupBox>
         </Grid>
-        <Grid Grid.Column="1" Grid.Row="0">
+        <GridSplitter Grid.Column="1" Grid.Row="0" Background="LightGray"
+                      HorizontalAlignment="Stretch"/>
+        <Grid Grid.Column="2" Grid.Row="0">
             <GroupBox Header="Сoefficients">
                 <StackPanel>
                     <Label Content="a:"/>
@@ -33,7 +37,9 @@
                 </StackPanel>
             </GroupBox>
         </Grid>
-        <Grid Grid.Column="2" Grid.Row="0">
+        <GridSplitter Grid.Column="3" Grid.Row="0" Background="LightGray"
+                      HorizontalAlignment="Stretch"/>
+        <Grid Grid.Column="4" Grid.Row="0">
             <GroupBox Header="Calculations">
                 <DataGrid ItemsSource="{Binding SelectedFunction.Calculations}" ColumnWidth="*"
                           CanUserAddRows="True" AutoGenerateColumns="False" >
