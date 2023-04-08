@@ -14,6 +14,9 @@ namespace FunctionCalculationWpfApp.Model.Functions
         /// </summary>
         private static double[] _cValues = new double[] { 1, 2, 3, 4, 5 };
 
+        /// <summary>
+        /// Возвращает значения для коэффициента c.
+        /// </summary>
         public override double[] CValues => _cValues;
 
         /// <summary>
@@ -32,6 +35,12 @@ namespace FunctionCalculationWpfApp.Model.Functions
         /// <param name="c">Коэффициент c.</param>
         public LinearFunction(double a, double b, double c) : base(a, b, c) {}
 
+        /// <summary>
+        /// Рассчитывает значение функции с параметрами x, y.
+        /// </summary>
+        /// <param name="x">Параметр x.</param>
+        /// <param name="y">Параметр y.</param>
+        /// <returns>Значение функции с параметрами x, y.</returns>
         public override double Calculate(double x, double y) => A * x + B + C;
 
         /// <summary>

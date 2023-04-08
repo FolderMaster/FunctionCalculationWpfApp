@@ -42,7 +42,8 @@
         <Grid Grid.Column="4" Grid.Row="0">
             <GroupBox Header="Calculations">
                 <DataGrid ItemsSource="{Binding SelectedFunction.Calculations}" ColumnWidth="*"
-                          CanUserAddRows="True" AutoGenerateColumns="False" >
+                          CanUserAddRows="True" CanUserDeleteRows="True"
+                          AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="True" Header="f(x, y)"
                                             Binding="{Binding FunctionValue}"/>

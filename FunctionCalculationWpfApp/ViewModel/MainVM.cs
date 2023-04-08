@@ -78,7 +78,7 @@ namespace FunctionCalculationWpfApp.ViewModel
             Functions = new List<Function>()
             {
                 new LinearFunction(), new QuadraticFunction(), new CubicFunction(),
-                new Degree4Function(), new Degree5Function()
+                new FourthDegreeFunction(), new FifthDegreeFunction()
             };
         }
     }

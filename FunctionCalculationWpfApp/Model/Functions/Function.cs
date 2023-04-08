@@ -68,7 +68,7 @@ namespace FunctionCalculationWpfApp.Model.Functions
         }
 
         /// <summary>
-        /// Возвращает и задаёт коэффициент c.
+        /// Возвращает и задаёт коэффициент c. Должно быть из <see cref="CValues"/>.
         /// </summary>
         public double C
         {
@@ -89,17 +89,9 @@ namespace FunctionCalculationWpfApp.Model.Functions
         }
 
         /// <summary>
-        /// Возвращает значениями для коэффициента c.
+        /// Возвращает значения для коэффициента c.
         /// </summary>
         public abstract double[] CValues { get; }
-
-        /// <summary>
-        /// Рассчитывает значение функции с параметрами x, y.
-        /// </summary>
-        /// <param name="x">Параметр x.</param>
-        /// <param name="y">Параметр y.</param>
-        /// <returns>Значение функции с параметрами x, y.</returns>
-        public abstract double Calculate(double x, double y);
 
         /// <summary>
         /// Возвращает расчёты.
@@ -131,6 +123,14 @@ namespace FunctionCalculationWpfApp.Model.Functions
             B = b;
             C = c;
         }
+
+        /// <summary>
+        /// Рассчитывает значение функции с параметрами x, y.
+        /// </summary>
+        /// <param name="x">Параметр x.</param>
+        /// <param name="y">Параметр y.</param>
+        /// <returns>Значение функции с параметрами x, y.</returns>
+        public abstract double Calculate(double x, double y);
 
         private void Calculations_CollectionChanged(object? sender,
             NotifyCollectionChangedEventArgs e)

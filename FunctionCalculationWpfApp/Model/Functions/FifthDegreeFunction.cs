@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace FunctionCalculationWpfApp.Model.Functions
 {
@@ -7,31 +8,40 @@ namespace FunctionCalculationWpfApp.Model.Functions
     /// c, значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
     /// Реализует <see cref="INotifyPropertyChanged"/>.
     /// </summary>
-    public class Degree5Function : Function
+    public class FifthDegreeFunction : Function
     {
         /// <summary>
         /// Значения для коэффициента c.
         /// </summary>
         private static double[] _cValues = new double[] { 10000, 20000, 30000, 40000, 50000 };
 
+        /// <summary>
+        /// Возвращает значения для коэффициента c.
+        /// </summary>
         public override double[] CValues => _cValues;
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Degree5Function"/> по умолчанию.
+        /// Создаёт экземпляр класса <see cref="FifthDegreeFunction"/> по умолчанию.
         /// </summary>
-        public Degree5Function() : base()
+        public FifthDegreeFunction() : base()
         {
             C = CValues[0];
         }
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Degree5Function"/>.
+        /// Создаёт экземпляр класса <see cref="FifthDegreeFunction"/>.
         /// </summary>
         /// <param name="a">Коэффициент a.</param>
         /// <param name="b">Коэффициент b.</param>
         /// <param name="c">Коэффициент c.</param>
-        public Degree5Function(double a, double b, double c) : base(a, b, c) {}
+        public FifthDegreeFunction(double a, double b, double c) : base(a, b, c) {}
 
+        /// <summary>
+        /// Рассчитывает значение функции с параметрами x, y.
+        /// </summary>
+        /// <param name="x">Параметр x.</param>
+        /// <param name="y">Параметр y.</param>
+        /// <returns>Значение функции с параметрами x, y.</returns>
         public override double Calculate(double x, double y) =>
             A * Math.Pow(x, 5) + B * Math.Pow(y, 4) + C;
 
