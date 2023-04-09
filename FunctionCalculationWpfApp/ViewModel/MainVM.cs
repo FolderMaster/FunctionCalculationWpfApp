@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 
-using FunctionCalculationWpfApp.Model;
 using FunctionCalculationWpfApp.Model.Functions;
 using FunctionCalculationWpfApp.View;
 
