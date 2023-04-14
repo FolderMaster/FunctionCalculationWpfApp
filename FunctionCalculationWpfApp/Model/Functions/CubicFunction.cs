@@ -1,12 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Класс кубической функции типа "f(x, y) = a * x ^ 3 + b * y ^ 2 + c" с коэффициентами a, b,
     /// c, значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
-    /// Реализует <see cref="INotifyPropertyChanged"/>.
     /// </summary>
     public class CubicFunction : Function
     {
@@ -49,6 +47,6 @@ namespace FunctionCalculationWpfApp.Model.Functions
         /// Возвращает строковое представление класса.
         /// </summary>
         /// <returns>Строковое представление класса.</returns>
-        public override string ToString() => "Сubic";
+        public override string ToString() => "Cubic";
     }
 }

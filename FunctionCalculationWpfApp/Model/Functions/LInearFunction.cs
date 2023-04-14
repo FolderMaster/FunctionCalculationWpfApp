@@ -1,11 +1,8 @@
-﻿using System.ComponentModel;
-
-namespace FunctionCalculationWpfApp.Model.Functions
+﻿namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Класс линейной функции типа "f(x, y) = a * x + b + c" с коэффициентами a, b, c, значениями
-    /// для коэффициента c и расчётами. Унаследован от <see cref="Function"/>. Реализует
-    /// <see cref="INotifyPropertyChanged"/>.
+    /// для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
     /// </summary>
     public class LinearFunction : Function
     {

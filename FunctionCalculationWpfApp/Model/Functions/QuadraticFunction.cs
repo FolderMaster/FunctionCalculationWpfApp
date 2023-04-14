@@ -1,12 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Класс квадратичной функции типа "f(x, y) = a * x ^ 2 + b * y + c" с коэффициентами a, b, c,
-    /// значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>. Реализует
-    /// <see cref="INotifyPropertyChanged"/>.
+    /// значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
     /// </summary>
     public class QuadraticFunction : Function
     {

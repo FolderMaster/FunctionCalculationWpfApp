@@ -1,12 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Класс функции 4 степени типа "f(x, y) = a * x ^ 4 + b * y ^ 3 + c" с коэффициентами a, b,
     /// c, значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
-    /// Реализует <see cref="INotifyPropertyChanged"/>.
     /// </summary>
     public class FourthDegreeFunction : Function
     {

@@ -74,8 +74,9 @@ namespace FunctionCalculationWpfApp.Model.Functions.Tests
         public void CalculateTest(double a, double b, double c, double x, double y,
             double expected)
         {
-            FifthDegreeFunction function = new FifthDegreeFunction(a, b, c);
-            double actual = function.Calculate(x, y);
+            // Если не через var, значит, dynamic?
+            dynamic function = new FifthDegreeFunction(a, b, c);
+            dynamic actual = function.Calculate(x, y);
             Assert.AreEqual(expected, actual);
         }
     }

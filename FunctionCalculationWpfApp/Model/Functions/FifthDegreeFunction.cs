@@ -1,12 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Класс функции 5 степени типа "f(x, y) = a * x ^ 5 + b * y ^ 4 + c" с коэффициентами a, b,
     /// c, значениями для коэффициента c и расчётами. Унаследован от <see cref="Function"/>.
-    /// Реализует <see cref="INotifyPropertyChanged"/>.
     /// </summary>
     public class FifthDegreeFunction : Function
     {

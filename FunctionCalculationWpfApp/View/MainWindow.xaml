@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FunctionCalculationWpfApp.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
+        MinWidth="280" MinHeight="210"
+        Height="400" Width="600"
+        Title="Fucntion calculation">
     <Grid Margin="5px">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -26,14 +28,11 @@
             <GroupBox Header="Сoefficients">
                 <StackPanel>
                     <Label Content="a:"/>
-                    <TextBox Text="{Binding SelectedFunction.A,
-                        UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Text="{Binding AString, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="b:"/>
-                    <TextBox Text="{Binding SelectedFunction.B,
-                        UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Text="{Binding BString, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="c:"/>
-                    <ComboBox ItemsSource="{Binding SelectedFunction.CValues}"
-                              SelectedValue="{Binding SelectedFunction.C}"/>
+                    <ComboBox ItemsSource="{Binding CValues}" SelectedValue="{Binding C}"/>
                 </StackPanel>
             </GroupBox>
         </Grid>
@@ -41,15 +40,15 @@
                       HorizontalAlignment="Stretch"/>
         <Grid Grid.Column="4" Grid.Row="0">
             <GroupBox Header="Calculations">
-                <DataGrid ItemsSource="{Binding SelectedFunction.Calculations}" ColumnWidth="*"
+                <DataGrid ItemsSource="{Binding CalculationViews}" ColumnWidth="*"
                           CanUserAddRows="True" CanUserDeleteRows="True"
                           AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="True" Header="f(x, y)"
                                             Binding="{Binding FunctionValue}"/>
-                        <DataGridTextColumn Binding="{Binding X,
+                        <DataGridTextColumn Binding="{Binding XString,
                             UpdateSourceTrigger=PropertyChanged}" Header="x"/>
-                        <DataGridTextColumn Binding="{Binding Y,
+                        <DataGridTextColumn Binding="{Binding YString,
                             UpdateSourceTrigger=PropertyChanged}" Header="y"/>
                     </DataGrid.Columns>
                 </DataGrid>

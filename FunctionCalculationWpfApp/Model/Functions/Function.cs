@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
 using System.Collections.Specialized;
 
@@ -8,9 +7,9 @@ namespace FunctionCalculationWpfApp.Model.Functions
 {
     /// <summary>
     /// Абстрактный класс функции с коэффициентами a, b, c, значениями для коэффициента c и
-    /// расчётами. Реализует <see cref="INotifyPropertyChanged"/>.
+    /// расчётами.
     /// </summary>
-    public abstract class Function : INotifyPropertyChanged
+    public abstract class Function
     {
         /// <summary>
         /// Расчёты.
@@ -39,15 +38,7 @@ namespace FunctionCalculationWpfApp.Model.Functions
         public double A
         {
             get => _a;
-            set
-            {
-                if (A != value)
-                {
-                    _a = value;
-                    PropertyChanged?.Invoke(this,
-                        new PropertyChangedEventArgs(nameof(A)));
-                }
-            }
+            set => _a = value;
         }
 
         /// <summary>
@@ -56,15 +47,7 @@ namespace FunctionCalculationWpfApp.Model.Functions
         public double B
         {
             get => _b;
-            set
-            {
-                if (B != value)
-                {
-                    _b = value;
-                    PropertyChanged?.Invoke(this,
-                        new PropertyChangedEventArgs(nameof(B)));
-                }
-            }
+            set => _b = value;
         }
 
         /// <summary>
@@ -77,13 +60,11 @@ namespace FunctionCalculationWpfApp.Model.Functions
             {
                 if (!CValues.Contains(value))
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException($"{nameof(CValues)} does not include value!");
                 }
-                if (C != value)
+                else
                 {
                     _c = value;
-                    PropertyChanged?.Invoke(this,
-                        new PropertyChangedEventArgs(nameof(C)));
                 }
             }
         }
@@ -97,11 +78,6 @@ namespace FunctionCalculationWpfApp.Model.Functions
         /// Возвращает расчёты.
         /// </summary>
         public ObservableCollection<Calculation> Calculations => _calculations;
-
-        /// <summary>
-        /// Обработчик события изменения свойства.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Function"/> по умолчанию.
